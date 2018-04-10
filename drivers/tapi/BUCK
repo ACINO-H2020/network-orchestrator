@@ -1,0 +1,24 @@
+COMPILE_DEPS = [
+  '//lib:CORE_DEPS',
+  '//incubator/api:onos-incubator-api',
+  '//protocols/rest/api:onos-protocols-rest-api',
+  '//apps/optical-model:onos-apps-optical-model',
+  '//lib:javax.ws.rs-api',
+  '//lib:JACKSON',
+]
+
+osgi_jar_with_tests (
+  deps = COMPILE_DEPS,
+  resources_root = 'src/main/resources',
+  resources = glob(['src/main/resources/**']),
+  do_checkstyle = False,
+)
+
+onos_app (
+  app_name = 'org.onosproject.drivers.tapi',
+  title = 'TAPI Device Driver',
+  category = 'Drivers',
+  url = 'http://onosproject.org',
+  description = 'ONOS TAPI Device Driver application.',
+  required_apps = [ 'org.onosproject.restsb', 'org.onosproject.optical-model' ],
+)

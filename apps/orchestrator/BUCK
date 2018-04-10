@@ -1,0 +1,204 @@
+remote_jar(
+    name = 'guava',
+    out = 'guava-19.0.jar',
+    url = 'mvn:com.google.guava:guava:jar:19.0',
+    sha1 = '6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9',
+    maven_coords = 'com.google.guava:guava:19.0',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'jackson-annotations',
+    out = 'jackson-annotations-2.8.8.jar',
+    url = 'mvn:com.fasterxml.jackson.core:jackson-annotations:jar:2.8.8',
+    sha1 = '1ed81c0e4eb2d261d1da0a3a45bd6b199fb5cf9a',
+    maven_coords = 'com.fasterxml.jackson.core:jackson-annotations:2.8.8',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'jackson-core',
+    out = 'jackson-core-2.8.8.jar',
+    url = 'mvn:com.fasterxml.jackson.core:jackson-core:jar:2.8.8',
+    sha1 = 'd478fb6de45a7c3d2cad07c8ad70c7f0a797a020',
+    maven_coords = 'com.fasterxml.jackson.core:jackson-core:2.8.8',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'jackson-databind',
+    out = 'jackson-databind-2.8.8.jar',
+    url = 'mvn:com.fasterxml.jackson.core:jackson-databind:jar:2.8.8',
+    sha1 = 'bf88c7b27e95cbadce4e7c316a56c3efffda8026',
+    maven_coords = 'com.fasterxml.jackson.core:jackson-databind:2.8.8',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'jackson-yaml',
+    out = 'jackson-dataformat-yaml-2.8.8.jar',
+    url = 'mvn:com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.8.8',
+    sha1 = 'fe81db224d5f06539de17aceb30ea7ba6ef8a300',
+    maven_coords = 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.8',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'swagger-annotations',
+    binary_jar = 'deps/swagger-annotations-1.5.10.jar',
+    maven_coords = 'eu.acino:swagger-annotations:1.5.10-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'swagger-jersey2-jaxrs',
+    binary_jar = 'deps/swagger-jersey2-jaxrs-1.5.10.jar',
+    maven_coords = 'eu.acino:swagger-jersey2-jaxrs:1.5.10-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'swagger-jaxrs',
+    binary_jar = 'deps/swagger-jaxrs-1.5.10.jar',
+    maven_coords = 'eu.acino:swagger-jaxrs:1.5.10-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'swagger-models',
+    binary_jar = 'deps/swagger-models-1.5.10.jar',
+    maven_coords = 'eu.acino:swagger-models:1.5.10-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'swagger-core',
+    binary_jar = 'deps/swagger-core-1.5.10.jar',
+    maven_coords = 'eu.acino:swagger-core:1.5.10-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'reflections',
+    binary_jar = 'deps/org.apache.servicemix.bundles.reflections-0.9.10_3.jar',
+    maven_coords = 'eu.acino:org.apache.servicemix.bundles.reflections:0.9.10_3-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'snakeyaml',
+    out = 'snakeyaml-1.17.jar',
+    url = 'mvn:org.yaml:snakeyaml:jar:1.17',
+    sha1 = '7a27ea250c5130b2922b86dea63cbb1cc10a660c',
+    maven_coords = 'org.yaml:snakeyaml:1.17',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+prebuilt_jar(
+    name = 'jxrapc',
+    binary_jar = 'deps/xrappeer-0.0.6.jar',
+    maven_coords = 'com.wpl.xrapc:xrappeer:0.0.6-SNAPSHOT',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'zeromq',
+    out = 'jeromq-0.3.6.jar',
+    url = 'mvn:org.zeromq:jeromq:jar:0.3.6',
+    sha1 = '8e6936d98d940b337f77907c13c096f7d9f3f369',
+    maven_coords = 'org.zeromq:jeromq:0.3.6',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'gson',
+    out = 'gson-2.7.jar',
+    url = 'mvn:com.google.code.gson:gson:jar:2.7',
+    sha1 = '751f548c85fa49f330cecbb1875893f971b33c4e',
+    maven_coords = 'com.google.code.gson:gson:2.7',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+remote_jar(
+    name = 'commons-codec',
+    out = 'commons-codec-1.10.jar',
+    url = 'mvn:commons-codec:commons-codec:jar:1.10',
+    sha1 = '4b95f4897fa13f2cd904aee711aeafc0c5295cd8',
+    maven_coords = 'commons-codec:commons-codec:1.10',
+    visibility = [
+        'PUBLIC'
+    ],
+)
+
+BUNDLES = [
+    '//apps/orchestrator/mgr:onos-apps-orchestrator-mgr',
+    '//apps/orchestrator/web:onos-apps-orchestrator-web',
+    '//apps/orchestrator/cli:onos-apps-orchestrator-cli',
+    '//apps/orchestrator/netrap:onos-apps-orchestrator-netrap',
+    #
+    # web
+    ':swagger-annotations',
+    #
+    # netrap
+    '//core/api:onos-api',
+    '//lib:osgi-core',
+    '//providers/null:onos-providers-null',
+    # already in
+    #':swagger-annotations',
+    ':swagger-models',
+    ':swagger-jersey2-jaxrs',
+    ':swagger-jaxrs',
+    ':swagger-core',
+    ':jxrapc',
+    ':snakeyaml',
+    ':jackson-core',
+    ':jackson-databind',
+    ':jackson-annotations',
+    ':jackson-yaml',
+    ':reflections',
+    ':zeromq',
+    ':guava',
+    ':gson',
+    ':commons-codec',
+]
+
+onos_app(
+    title = 'ACINO Orchestrator App',
+    description = 'ACINO Orchestrator application',
+    category = 'Multi-layer orchestration',
+    url = 'www.acino.eu',
+    included_bundles = BUNDLES,
+    required_apps = [
+        'org.onosproject.optical-model'
+    ],
+)

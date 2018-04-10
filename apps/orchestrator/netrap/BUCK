@@ -1,0 +1,34 @@
+COMPILE_DEPS = [
+    '//lib:CORE_DEPS',
+    '//lib:JACKSON',
+    '//lib:KRYO',
+    '//core/store/serializers:onos-core-serializers',
+    '//apps/orchestrator/mgr:onos-apps-orchestrator-mgr',
+    '//apps/orchestrator:swagger-annotations',
+    '//apps/orchestrator:swagger-models',
+    '//apps/orchestrator:swagger-jersey2-jaxrs',
+    '//apps/orchestrator:jxrapc',
+    '//apps/orchestrator:gson',
+    '//apps/orchestrator:commons-codec',
+    '//apps/optical-model:onos-apps-optical-model',
+    '//utils/rest:onlab-rest',
+    '//core/common:onos-core-common',
+    '//providers/null:onos-providers-null',
+    '//cli:onos-cli',
+    '//lib:servlet-api',
+    '//lib:javax.ws.rs-api',
+    '//lib:jersey-server',
+    '//lib:org.apache.karaf.shell.console',
+
+]
+
+TEST_DEPS = [
+    '//lib:TEST_ADAPTERS',
+    '//utils/osgi:onlab-osgi-tests',
+]
+
+osgi_jar_with_tests(
+    deps = COMPILE_DEPS,
+    test_deps = TEST_DEPS,
+    import_packages = '*',
+)

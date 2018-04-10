@@ -1,0 +1,19 @@
+COMPILE_DEPS = [
+    '//lib:CORE_DEPS',
+    '//protocols/netconf/api:onos-protocols-netconf-api',
+    '//lib:org.apache.servicemix.bundles.snmp4j',
+    '//protocols/snmp/api:onos-protocols-snmp-api',
+
+
+]
+
+osgi_jar (
+    deps = COMPILE_DEPS,
+)
+
+onos_app (
+    title = 'SNMP Trap App',
+    category = 'Alarm',
+    url = 'http://acino.eu',
+    required_apps = [ 'org.onosproject.snmp', 'org.onosproject.netconf']
+)

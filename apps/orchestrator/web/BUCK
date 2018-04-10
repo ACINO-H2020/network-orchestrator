@@ -1,0 +1,29 @@
+COMPILE_DEPS = [
+    '//lib:CORE_DEPS',
+    '//lib:JACKSON',
+    '//lib:KRYO',
+    '//core/store/serializers:onos-core-serializers',
+    '//utils/rest:onlab-rest',
+    '//core/common:onos-core-common',
+    '//lib:javax.ws.rs-api',
+    '//cli:onos-cli',
+    '//lib:org.apache.karaf.shell.console',
+    '//apps/orchestrator/mgr:onos-apps-orchestrator-mgr',
+    '//apps/orchestrator:swagger-annotations',
+]
+
+TEST_DEPS = [
+    '//lib:TEST',
+    '//lib:TEST_ADAPTERS',
+]
+
+osgi_jar_with_tests(
+    deps = COMPILE_DEPS,
+    test_deps = TEST_DEPS,
+    web_context = '/onos/acino',
+    api_title = 'ONOS ACINO REST API',
+    api_version = '1.0',
+    api_description = 'ONOS ACINO REST API',
+    api_package = 'org.onosproject.orchestrator.dismi.rest',
+    do_checkstyle = False,
+)

@@ -1,0 +1,20 @@
+BUNDLES = [
+  '//providers/snmp/device:onos-providers-snmp-device',
+  '//protocols/snmp/api:onos-protocols-snmp-api',
+  '//protocols/snmp/ctl:onos-protocols-snmp-ctl',
+  '//lib:org.apache.servicemix.bundles.snmp4j',
+  '//lib:mibs-rfc',
+  '//lib:snmp-core',
+  '//lib:bti7000',
+  '//lib:mibs-net-snmp',
+]
+
+onos_app (
+    app_name = 'org.onosproject.snmp',
+    title = 'SNMP Provider',
+    category = 'Provider',
+    url = 'https://wiki.onosproject.org/display/ONOS/SNMP',
+    included_bundles = BUNDLES,
+    description = 'Provides means for ONOS to discover and trigger the initial handshake procedure ' +
+        'with SNMP enabled devices from information given by network configuration.',
+)

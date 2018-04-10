@@ -1,0 +1,8 @@
+# Cell example for ACINO orchestrator
+
+export ONOS_NIC="192.168.1.*"
+export OC1="192.168.1.2"
+
+export ONOS_APPS="drivers,drivers.tapi,restsb,netcfghostprovider,netcfgclientportsprovider,orchestrator,linkdiscovery,drivers.juniper"
+export ONOS_USER="sdn"
+export ONOS_GROUP="sdn"

@@ -1,0 +1,13 @@
+{
+  "type": "HostToHostIntent",
+  "appId": "org.onosproject.cli",
+  "priority": 10,
+  "one": "00:00:00:00:00:01/None",
+  "two": "00:00:00:00:00:02/None",
+  "constraints": [
+    {
+       "type": "ObstacleConstraint",
+       "waypoints": ["of:000000000000000e"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+	"devices": {
+		"netconf:192.168.1.2:830": {
+			"netconf": {
+				"username": "acino",
+				"password": "password",
+				"ip": "192.168.1.1",
+				"port": 830
+
+			},
+			"basic": {
+				"driver": "juniper-netconf",
+				"name": "Madrid-J1",
+				"latitude" : 40.38,
+				"longitude" : -4.29
+
+			}
+		},
+		"rest:192.168.1.1:8080": {
+			"rest": {
+				"ip": "192.168.1.1",
+				"port": "8080",
+				"url": "/advabase/tapi/restconf/",
+				"protocol": "http",
+				"manufacturer": "TAPI",
+				"hwVersion": "1.0.0",
+				"swVersion": "1.0.0"
+			}
+		}
+	},
+	"links": {
+		"netconf:192.168.1.2:830/516-rest:fsp3000_196_tr_2/1": {
+			"basic": {
+				"durable": "true",
+				"type": "DIRECT"
+
+			}
+		}
+	}
+}
+

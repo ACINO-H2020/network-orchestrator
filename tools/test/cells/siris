@@ -1,0 +1,14 @@
+# Siris deployment with 3 instances and mininet box
+
+export ONOS_NIC=192.168.6.*
+export OC1="192.168.6.99"
+export OC2="192.168.6.101"
+export OC3="192.168.6.108"
+export OCN="192.168.6.107"
+
+export ONOS_APPS="drivers,openflow,fwd,proxyarp,mobility"
+
+export ONOS_USER=ubuntu
+export ONOS_GROUP=ubuntu
+export ONOS_WEB_PASS=rocks
+export ONOS_WEB_USER=onos

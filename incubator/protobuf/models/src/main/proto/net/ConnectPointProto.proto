@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "org.onosproject.grpc.net.models";
+
+package net;
+
+message ConnectPointProto {
+    oneof element_id {
+        // DeviceID as String DeviceId#toString
+        string device_id = 1;
+        string host_id = 3;
+        string ip_element_id = 4;
+    }
+    // PortNumber as String PortNumber#toString
+    string port_number = 2;
+}

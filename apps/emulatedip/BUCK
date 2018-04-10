@@ -1,0 +1,18 @@
+COMPILE_DEPS = [
+    '//lib:CORE_DEPS',
+    '//core/api:onos-api',
+    '//lib:slf4j-api',
+    '//lib:junit',
+]
+
+osgi_jar_with_tests (
+    deps = COMPILE_DEPS,
+    do_checkstyle = False,
+)
+
+onos_app (
+    title = 'Emulated IP',
+    category = 'Emulated IP link',
+    url = 'acino.eu',
+    description = 'Management of ACINO IP links',
+)

@@ -1,0 +1,16 @@
+COMPILE_DEPS = [
+    '//lib:CORE_DEPS',
+    '//core/store/serializers:onos-core-serializers',
+    '//lib:KRYO',
+]
+
+TEST_DEPS = [
+    '//lib:TEST',
+    '//core/api:onos-api-tests',
+]
+
+osgi_jar_with_tests(
+    deps = COMPILE_DEPS,
+    test_deps = TEST_DEPS,
+    do_checkstyle = False,
+)
